@@ -1,0 +1,77 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Options</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+      background: #4682b4;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    div {
+      cursor: pointer;
+      text-align: center;
+      padding: 1px 3px;
+      font-family: sans-serif;
+      font-size: 0.8em;
+      width: 1024px;
+      margin-top: 1px;
+      background: #4682b4;
+    }
+    div:hover {
+      background: #4682b4;
+    }
+    #form {
+      border: 1px solid white;
+      color: white;
+    }
+    #option {
+      border: 1px solid white;
+      color: white;
+    }
+    #About {
+      border: 1px solid white;
+      color: white;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div id="form">
+    <table width="100%">
+		<tbody>
+			<tr>
+			<td width="35%">Apply Retry Interval</td>
+			<td width="35%" nowrap=""><input name="applyretryseconds" type="text" maxlength="50" value = "10" id="applyretryseconds" size="30">
+				<span>seconds</span></td>
+			<td></td>
+		</tr>
+			<tr>
+			<td width="35%">Submit Retry Interval</td>
+			<td width="35%" nowrap=""><input name="submitretryseconds" type="text" maxlength="50" value = "10" id="submitretryseconds" size="30">
+				<span>seconds</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Pay Retry Interval</td>
+			<td nowrap=""><input name="payretryseconds" type="text" maxlength="30" value = "10" id="payretryseconds" size="30">
+				<span>seconds</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Current Customer ID</td>
+			<td nowrap=""><input name="customerid" type="text" maxlength="30" value = "0" id="customerid" size="30">
+				<span>seconds</span></td>
+			<td></td>
+		</tr>
+		</tbody>
+		</table>
+	</div>
+ <div id="option">
+ 	<input type="image" name="ctl00$ContentPlaceHolder1$wizardPageFooter$wizardPageNavigator$validateButton" id="ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton" accesskey="S" src="./button_save.gif" alt="Save (ALT + S)" style="border-width:1px;"></div>
+  <script src="./options.js"></script>
+</body></html>

@@ -1,0 +1,43 @@
+{
+  "name": "AutoWHV",
+  "version": "4.3",
+  "manifest_version": 2,
+  "description": "apply working holiday visa automatically",
+  "permissions": ["tabs",
+   								"storage",
+  								"webRequest", 
+  								"webNavigation",
+  								"cookies",
+  								"browsingData",
+  								"http://*/*", "https://*/*"
+  								],
+  "background": {
+  	"page": "audio.html"
+  },
+  
+  "icons" : {
+    "16" : "auto_whv_16.png",
+    "48" : "auto_whv_48.png",
+    "128" : "auto_whv_128.png"
+  },
+ "content_scripts" : [
+    {
+				"matches" : [ "http://www.immigration.govt.nz/*",
+											"https://www.immigration.govt.nz/*",
+											"http://formshelp.immigration.govt.nz/*",
+											"https://webcomm.paymark.co.nz/*",
+											"http://dol.govt.nz/*" ],
+				"js" : ["jquery-1.10.2.min.js","auto-whv.tamper.js"],
+				"run_at" : "document_idle",
+				"all_frames" : false
+   }
+  ],
+  "web_accessible_resources": [
+	    "jquery-1.10.2.min.map"
+	],
+    "browser_action": {
+      "default_title": "Print this page",
+      "default_icon": "auto_whv_16.png",
+      "default_popup": "popup.html"
+  }
+}
